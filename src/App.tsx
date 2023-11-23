@@ -54,7 +54,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className={styles.appBody}>
       <Header />
       <main className={styles.content}>
         <AddTodo onAddTodo={addTodoHandler} />
@@ -64,11 +64,10 @@ function App() {
           onCheckTodo={checkTodo}
         />
       </main>
-      <footer className={styles.footer}>
-        <a href="">source in github.</a> by Rapha Olive
-      </footer>
-    </>
+    </div>
   );
 }
 
 export default App;
+
+
