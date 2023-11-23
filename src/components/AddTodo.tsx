@@ -1,6 +1,6 @@
 import { PlusCircle } from "phosphor-react";
 import styles from "./AddTodo.module.css";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { TaskType } from "./TodoList";
 
@@ -22,7 +22,12 @@ export const AddTodo = ({ onAddTodo }: AddTodoProps) => {
   };
 
   const handleNewTodoTitle = (event: ChangeEvent<HTMLInputElement>) => {
+    event.target.setCustomValidity("");
     setNewTodoTitle(event.target.value);
+  };
+
+  const handleNewTaskInvalid = (event: InvalidEvent<HTMLInputElement>) => {
+    event.target.setCustomValidity("Este campo é obrigatório!");
   };
 
   return (
@@ -34,6 +39,7 @@ export const AddTodo = ({ onAddTodo }: AddTodoProps) => {
         name="todo"
         placeholder="Adicione uma nova tarefa"
         required
+        onInvalid={handleNewTaskInvalid}
       />
       <button>
         Criar <PlusCircle size={20} />
