@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: center;
+    background: var(--gray-700);
+    /* Para quem estiver corrigindo o desafio - O template no figma tinha 200px de height, menos 48px de altura da logo sobraria 152px (9.5rem), mas isso ficou muito grande na minha opinião, então decidi manter 5rem. */
+    padding: 5rem 0; 
+
+}
+
+.header img {
+    height: 3rem;
+}

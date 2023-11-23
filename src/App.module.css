@@ -1,0 +1,30 @@
+.content {
+  max-width: 47rem;
+  margin: -1.7rem auto;
+  padding: 0 1rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  padding: 0.3rem 0;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--gray-300);
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: var(--purple);
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+}
